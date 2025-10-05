@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dce177tan4gch"]
+
+[ext_resource type="Texture2D" uid="uid://356gubypju3q" path="res://AsgoreSprites/BattleSprites/spr_firebullet/spr_firebullet_0.png" id="1_wexf5"]
+[ext_resource type="Script" uid="uid://dnuenlqbjm58" path="res://pelletscript.gd" id="2_3f2cq"]
+
+[node name="FirePellet" type="Area2D"]
+
+[node name="Fireball" type="Sprite2D" parent="."]
+texture = ExtResource("1_wexf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_3f2cq")

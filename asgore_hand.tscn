@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba3p0vpbhmje6"]
+
+[ext_resource type="Script" uid="uid://bgt05j5sdgard" path="res://asgore_hand.gd" id="1_xswyb"]
+[ext_resource type="Texture2D" uid="uid://babdod7j6y04a" path="res://AsgoreSprites/BattleSprites/spr_handbullet/spr_handbullet_0.png" id="2_c3dfc"]
+
+[node name="AsgoreHand" type="Node2D"]
+script = ExtResource("1_xswyb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(171, 205)
+texture = ExtResource("2_c3dfc")
+
+[node name="PelletTimer" type="Timer" parent="."]
