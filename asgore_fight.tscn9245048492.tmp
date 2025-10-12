@@ -1,0 +1,1094 @@
+[gd_scene load_steps=190 format=3 uid="uid://27pxv6qafmn"]
+
+[ext_resource type="Script" uid="uid://pqrte4dsa6vu" path="res://asgore_fight.gd" id="1_2we0i"]
+[ext_resource type="Texture2D" uid="uid://didv8ujtpj268" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-0.png" id="1_42q1s"]
+[ext_resource type="Texture2D" uid="uid://c4bba3k6s7cik" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-1.png" id="2_2we0i"]
+[ext_resource type="Texture2D" uid="uid://dgiqduo4u2jvv" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-2.png" id="3_5wmmi"]
+[ext_resource type="Texture2D" uid="uid://smxwnt8tcurm" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-3.png" id="4_laf4v"]
+[ext_resource type="Texture2D" uid="uid://d1ohaonom1h6l" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-4.png" id="5_uf776"]
+[ext_resource type="Texture2D" uid="uid://duud1q8ue8lfj" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-5.png" id="6_2i8jo"]
+[ext_resource type="Texture2D" uid="uid://bvh2eecj0d262" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-6.png" id="7_paw4w"]
+[ext_resource type="Texture2D" uid="uid://b30sojqkh37ai" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-7.png" id="8_7vluo"]
+[ext_resource type="Texture2D" uid="uid://uimv2t4eqn7x" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-8.png" id="9_oc61k"]
+[ext_resource type="Texture2D" uid="uid://0igtx1jvm4ov" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-9.png" id="10_bqp3b"]
+[ext_resource type="Texture2D" uid="uid://bv3luve64208j" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-10.png" id="11_l8vr0"]
+[ext_resource type="Texture2D" uid="uid://dmvgco61rtakx" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-11.png" id="12_125jg"]
+[ext_resource type="Texture2D" uid="uid://bexmx18orb2m3" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-12.png" id="13_voptb"]
+[ext_resource type="Texture2D" uid="uid://dcq16n46p50yr" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-13.png" id="14_21qi2"]
+[ext_resource type="Texture2D" uid="uid://c01m7br5ib1td" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-14.png" id="15_o4i85"]
+[ext_resource type="Texture2D" uid="uid://dhtqexmfolcne" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-15.png" id="16_5acr5"]
+[ext_resource type="Texture2D" uid="uid://d3oi164qojj4u" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-16.png" id="17_t1o58"]
+[ext_resource type="Texture2D" uid="uid://bral5jv87fsch" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-17.png" id="18_akgfx"]
+[ext_resource type="Texture2D" uid="uid://bxc8fbt0stwjo" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-18.png" id="19_cl5wd"]
+[ext_resource type="Texture2D" uid="uid://c4kn4dkfrh6v3" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-19.png" id="20_sn5n6"]
+[ext_resource type="Texture2D" uid="uid://c28n1mw1fwv6l" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-20.png" id="21_1gvry"]
+[ext_resource type="Texture2D" uid="uid://b2dfbkmhagmvn" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-21.png" id="22_gmc50"]
+[ext_resource type="Texture2D" uid="uid://ckwa7l7c4ofkr" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-22.png" id="23_2l4h3"]
+[ext_resource type="Texture2D" uid="uid://bab48cpu3dk15" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-23.png" id="24_dciif"]
+[ext_resource type="Texture2D" uid="uid://c7gakld7xcyqx" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-24.png" id="25_ffyoc"]
+[ext_resource type="Texture2D" uid="uid://dcst2p8xpmvfb" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-25.png" id="26_6s5sj"]
+[ext_resource type="Texture2D" uid="uid://dmn2oegkqw2jo" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-26.png" id="27_k32w1"]
+[ext_resource type="Texture2D" uid="uid://c88pajxtdspkn" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-27.png" id="28_yf7ki"]
+[ext_resource type="Texture2D" uid="uid://c3jy3d3mphqww" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-28.png" id="29_rpsrg"]
+[ext_resource type="Texture2D" uid="uid://b075lbm4co8p1" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-29.png" id="30_skmv4"]
+[ext_resource type="Texture2D" uid="uid://dkxwbxvcgttgk" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-30.png" id="31_2abnx"]
+[ext_resource type="Texture2D" uid="uid://d36kofhbt36ac" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-31.png" id="32_yurha"]
+[ext_resource type="Texture2D" uid="uid://spxji3hd45me" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-32.png" id="33_xb6ao"]
+[ext_resource type="Texture2D" uid="uid://bx1djrsc4opej" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-33.png" id="34_vmor2"]
+[ext_resource type="Texture2D" uid="uid://bdq3eleo01ndv" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-34.png" id="35_w6i62"]
+[ext_resource type="Texture2D" uid="uid://cyoukh55ugfqj" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-35.png" id="36_qmmtw"]
+[ext_resource type="Texture2D" uid="uid://c1k1ep23dovm7" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-36.png" id="37_gmp07"]
+[ext_resource type="Texture2D" uid="uid://b84rltqxlkqh8" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-37.png" id="38_17pq0"]
+[ext_resource type="Texture2D" uid="uid://c42bpoq20fxcy" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-38.png" id="39_7hbig"]
+[ext_resource type="Texture2D" uid="uid://da65kqm2vcdja" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-39.png" id="40_7p6k4"]
+[ext_resource type="Texture2D" uid="uid://cusmt5mtpxj40" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-40.png" id="41_t3uko"]
+[ext_resource type="Texture2D" uid="uid://cs0ng0nqx5obs" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-41.png" id="42_b5dhs"]
+[ext_resource type="Texture2D" uid="uid://b2xp5wtp3y32k" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-42.png" id="43_1p451"]
+[ext_resource type="Texture2D" uid="uid://qlic4t3kwar5" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-43.png" id="44_vaujp"]
+[ext_resource type="Texture2D" uid="uid://cjknhujutsf3s" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-44.png" id="45_ggjqd"]
+[ext_resource type="Texture2D" uid="uid://dnuassl6f1quh" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-45.png" id="46_uwk1v"]
+[ext_resource type="Texture2D" uid="uid://vetrqpebaw3a" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-46.png" id="47_7xaf3"]
+[ext_resource type="Texture2D" uid="uid://dnbrifqe7bx66" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-47.png" id="48_pbno3"]
+[ext_resource type="Texture2D" uid="uid://cffdp7h05wgm2" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-48.png" id="49_hxse5"]
+[ext_resource type="Texture2D" uid="uid://3dan813bxwm4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-49.png" id="50_sc5po"]
+[ext_resource type="Texture2D" uid="uid://bfqqcdajt47gp" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-50.png" id="51_1aaux"]
+[ext_resource type="Texture2D" uid="uid://bvd5w5fhyanvg" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-51.png" id="52_8tgq6"]
+[ext_resource type="Texture2D" uid="uid://20lhpqy11eco" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-52.png" id="53_n51ql"]
+[ext_resource type="Texture2D" uid="uid://dwyehbm1dg1n1" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-53.png" id="54_uxnlu"]
+[ext_resource type="Texture2D" uid="uid://dior0fimvk8hg" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-54.png" id="55_ixfmx"]
+[ext_resource type="Texture2D" uid="uid://ddurl4nxkma5k" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-55.png" id="56_pk6nc"]
+[ext_resource type="Texture2D" uid="uid://c5ppq0ovddiw2" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-56.png" id="57_qcwed"]
+[ext_resource type="Texture2D" uid="uid://5qoarr25l8xi" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-57.png" id="58_5kmpe"]
+[ext_resource type="Texture2D" uid="uid://4olq627mem4r" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-58.png" id="59_qv6tn"]
+[ext_resource type="Texture2D" uid="uid://dl7qxuklgrh7q" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-59.png" id="60_dqdtx"]
+[ext_resource type="Texture2D" uid="uid://d3iu3dijvdst4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-60.png" id="61_mvvg6"]
+[ext_resource type="Texture2D" uid="uid://ctyr1d0ekjh8f" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-61.png" id="62_tycwl"]
+[ext_resource type="Texture2D" uid="uid://bi5cillfu1c1v" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-62.png" id="63_fbfo3"]
+[ext_resource type="Texture2D" uid="uid://dubt8sica1wo5" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-63.png" id="64_yj1vb"]
+[ext_resource type="Texture2D" uid="uid://bd4csbvfmmdul" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-64.png" id="65_05xeg"]
+[ext_resource type="Texture2D" uid="uid://d3xkryrxmaxw2" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-65.png" id="66_4t4ni"]
+[ext_resource type="Texture2D" uid="uid://csq7gsdqxg7si" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-66.png" id="67_gqmge"]
+[ext_resource type="Texture2D" uid="uid://c08j7mnw32jpo" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-67.png" id="68_2ix11"]
+[ext_resource type="Texture2D" uid="uid://cuomlodks2meh" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-68.png" id="69_k2r06"]
+[ext_resource type="Texture2D" uid="uid://iqglec4hyes2" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-69.png" id="70_vek70"]
+[ext_resource type="Texture2D" uid="uid://cwtl5cakbv2w3" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-70.png" id="71_4ufos"]
+[ext_resource type="Texture2D" uid="uid://d1ogxjshkavxy" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-71.png" id="72_7a2nf"]
+[ext_resource type="Texture2D" uid="uid://bufvxk8dra170" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-72.png" id="73_qol2w"]
+[ext_resource type="Texture2D" uid="uid://dvx51h2hj4kl6" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-73.png" id="74_10rnu"]
+[ext_resource type="Texture2D" uid="uid://dcxkoy1sf3t7m" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-74.png" id="75_383cu"]
+[ext_resource type="Texture2D" uid="uid://dj1lidymrkt8j" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-75.png" id="76_ho7a1"]
+[ext_resource type="Texture2D" uid="uid://db23r5bu5ydu4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-76.png" id="77_ic374"]
+[ext_resource type="Texture2D" uid="uid://bxbkloong0dd8" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-77.png" id="78_3ubqr"]
+[ext_resource type="Texture2D" uid="uid://bfwgi4an6ejn4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-78.png" id="79_liasq"]
+[ext_resource type="Texture2D" uid="uid://nwa1cr4l62u0" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-79.png" id="80_vvn45"]
+[ext_resource type="Texture2D" uid="uid://yfb7su0orbxa" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-80.png" id="81_ercsx"]
+[ext_resource type="Texture2D" uid="uid://chbykih6ji5nn" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-81.png" id="82_wy2w7"]
+[ext_resource type="Texture2D" uid="uid://cdalldhlw3oto" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-82.png" id="83_ysflj"]
+[ext_resource type="Texture2D" uid="uid://cyo8m1wpemdu7" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-83.png" id="84_kv071"]
+[ext_resource type="Texture2D" uid="uid://duem32dwtsea0" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-84.png" id="85_1dh2y"]
+[ext_resource type="Texture2D" uid="uid://nxalyvul61cl" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-85.png" id="86_n5kvu"]
+[ext_resource type="Texture2D" uid="uid://ct53cuoru7nah" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-86.png" id="87_acu3s"]
+[ext_resource type="Texture2D" uid="uid://dmshond7nfi5o" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-87.png" id="88_5oycq"]
+[ext_resource type="Texture2D" uid="uid://dshdfr3a6skan" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-88.png" id="89_x1haj"]
+[ext_resource type="Texture2D" uid="uid://djbyluhly5k1k" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-89.png" id="90_x2meo"]
+[ext_resource type="Texture2D" uid="uid://digb1ppa650s3" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-90.png" id="91_c3hgv"]
+[ext_resource type="Texture2D" uid="uid://drls5p8q7gec0" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-91.png" id="92_7ijgb"]
+[ext_resource type="Texture2D" uid="uid://dpxg6jtclpvls" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-92.png" id="93_m56ai"]
+[ext_resource type="Texture2D" uid="uid://d30wq2pwj154c" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-93.png" id="94_8k5mn"]
+[ext_resource type="Texture2D" uid="uid://kbx1b42darql" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-94.png" id="95_u476f"]
+[ext_resource type="Texture2D" uid="uid://nytdjtkhfe52" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-95.png" id="96_ekuja"]
+[ext_resource type="Texture2D" uid="uid://qjxq14ud5da1" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-96.png" id="97_lxwwi"]
+[ext_resource type="Texture2D" uid="uid://sff5c0r1t3ig" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-97.png" id="98_8q44d"]
+[ext_resource type="Texture2D" uid="uid://phktu7pge5ij" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-98.png" id="99_tcp28"]
+[ext_resource type="Texture2D" uid="uid://da0ugdp84runj" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-99.png" id="100_3fe8a"]
+[ext_resource type="Texture2D" uid="uid://b1667fi25yksa" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-100.png" id="101_rins3"]
+[ext_resource type="Texture2D" uid="uid://66syy5ar50vr" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-101.png" id="102_wgiee"]
+[ext_resource type="Texture2D" uid="uid://cfqj0qi3jc6tb" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-102.png" id="103_nx3y2"]
+[ext_resource type="Texture2D" uid="uid://yupbf8isutrg" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-103.png" id="104_pr4to"]
+[ext_resource type="Texture2D" uid="uid://swaucdbi8l55" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-104.png" id="105_sabb0"]
+[ext_resource type="Texture2D" uid="uid://cby25hhyns4o2" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-105.png" id="106_4na5l"]
+[ext_resource type="Texture2D" uid="uid://ca1ypifowntnn" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-106.png" id="107_cuqte"]
+[ext_resource type="Texture2D" uid="uid://d4aegd11v3h83" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-107.png" id="108_ea4oj"]
+[ext_resource type="Texture2D" uid="uid://beqo4013ohm3i" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-108.png" id="109_euw2q"]
+[ext_resource type="Texture2D" uid="uid://djj7jvlqhjcfg" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-109.png" id="110_aloxy"]
+[ext_resource type="Texture2D" uid="uid://fyu1y6dhe8h4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-110.png" id="111_tyd35"]
+[ext_resource type="Texture2D" uid="uid://jrhiwvuqta03" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-111.png" id="112_f5mxs"]
+[ext_resource type="Texture2D" uid="uid://dd14hvjsnpmhx" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-112.png" id="113_lb67b"]
+[ext_resource type="Texture2D" uid="uid://h042jup2hbhb" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-113.png" id="114_gbeab"]
+[ext_resource type="Texture2D" uid="uid://ebqdngo4gjht" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-114.png" id="115_2gold"]
+[ext_resource type="Texture2D" uid="uid://bxwi6ff5nllnd" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-115.png" id="116_rl5q8"]
+[ext_resource type="Texture2D" uid="uid://bq8mkvsfex2mp" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-116.png" id="117_un6yt"]
+[ext_resource type="Texture2D" uid="uid://dbawpfj5vsya4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-117.png" id="118_aaqwe"]
+[ext_resource type="Texture2D" uid="uid://bfrquhxnpl6vd" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-118.png" id="119_75c25"]
+[ext_resource type="Texture2D" uid="uid://dqlq810whbhp8" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-119.png" id="120_bmqka"]
+[ext_resource type="Texture2D" uid="uid://dp4jqkujarkfg" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-120.png" id="121_5jlft"]
+[ext_resource type="Texture2D" uid="uid://dkccagwpumrpm" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-121.png" id="122_350q4"]
+[ext_resource type="Texture2D" uid="uid://wrdlkribynu7" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-122.png" id="123_oyqcy"]
+[ext_resource type="Texture2D" uid="uid://4bom807550gx" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-123.png" id="124_qpdnu"]
+[ext_resource type="Texture2D" uid="uid://ckf3u5bguuhkg" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-124.png" id="125_673wq"]
+[ext_resource type="Texture2D" uid="uid://w06v4301a8i8" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-125.png" id="126_jkh5h"]
+[ext_resource type="Texture2D" uid="uid://b0t4cbhgdykfa" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-126.png" id="127_od7tu"]
+[ext_resource type="Texture2D" uid="uid://d1vcfp5j4u8n5" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-127.png" id="128_tkj74"]
+[ext_resource type="Texture2D" uid="uid://mdr0xelypwrk" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-128.png" id="129_wbelv"]
+[ext_resource type="Texture2D" uid="uid://c6bid8l8vko7m" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-129.png" id="130_ipy8b"]
+[ext_resource type="Texture2D" uid="uid://b1d11t7katkyd" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-130.png" id="131_y7x6e"]
+[ext_resource type="Texture2D" uid="uid://du50ej8103dek" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-131.png" id="132_ws8i7"]
+[ext_resource type="Texture2D" uid="uid://qeilfte4do28" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-132.png" id="133_p4xyw"]
+[ext_resource type="Texture2D" uid="uid://di5ha0qfxk1wp" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-133.png" id="134_jcpd1"]
+[ext_resource type="Texture2D" uid="uid://buqq3uf0i7av0" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-134.png" id="135_cr505"]
+[ext_resource type="Texture2D" uid="uid://dhh6e1wyo88hc" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-135.png" id="136_dni2x"]
+[ext_resource type="Texture2D" uid="uid://cgx2m8au8g2km" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-136.png" id="137_y46nq"]
+[ext_resource type="Texture2D" uid="uid://cjxbunqo5d11y" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-137.png" id="138_5mdio"]
+[ext_resource type="Texture2D" uid="uid://d1fhtgma621s5" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-138.png" id="139_3gv5v"]
+[ext_resource type="Texture2D" uid="uid://bl5fbgmhajrn6" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-139.png" id="140_vdxcm"]
+[ext_resource type="Texture2D" uid="uid://cmfawx0w2t2di" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-140.png" id="141_mf47p"]
+[ext_resource type="Texture2D" uid="uid://te8csyvqepi4" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-141.png" id="142_rlsai"]
+[ext_resource type="Texture2D" uid="uid://cs3drow4ks7yo" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-142.png" id="143_8va2n"]
+[ext_resource type="Texture2D" uid="uid://d2t3eudalc8ji" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-143.png" id="144_g2xn0"]
+[ext_resource type="Texture2D" uid="uid://oohhlfln3xw" path="res://BattleMenuSprites/spr_fightbt/spr_fightbt_0.png" id="146_uf776"]
+[ext_resource type="Texture2D" uid="uid://ccbn4gap2uv04" path="res://BattleMenuSprites/spr_talkbt/spr_talkbt_0.png" id="147_2i8jo"]
+[ext_resource type="Texture2D" uid="uid://b0avmol70ffqy" path="res://BattleMenuSprites/spr_itembt/spr_itembt_0.png" id="148_paw4w"]
+[ext_resource type="FontFile" uid="uid://dpdhulc4uo8og" path="res://Fonts/determination-mono.otf" id="149_1gvry"]
+[ext_resource type="Texture2D" uid="uid://b0xa0wq20v3nw" path="res://BattleMenuSprites/spr_heart_battle_pl/spr_heart_battle_pl_0.png" id="149_paw4w"]
+[ext_resource type="Texture2D" uid="uid://yrov7nmq526v" path="res://BattleMenuSprites/spr_heart_battle_pl/spr_heart_battle_pl_1.png" id="150_7vluo"]
+[ext_resource type="Texture2D" uid="uid://cs50ijx8adqu2" path="res://BattleMenuSprites/spr_dumbtarget.png" id="150_dciif"]
+[ext_resource type="Texture2D" uid="uid://bh38urd02o0ii" path="res://AsgoreSprites/BodySprites/spr_asgoreb_cape/spr_asgoreb_cape_0.png" id="151_akgfx"]
+[ext_resource type="Texture2D" uid="uid://cyoafywmguewk" path="res://BattleMenuSprites/spr_targetchoice/spr_targetchoice_0.png" id="151_ffyoc"]
+[ext_resource type="Texture2D" uid="uid://drhinlchmhlnb" path="res://BattleMenuSprites/spr_targetchoice/spr_targetchoice_1.png" id="152_6s5sj"]
+[ext_resource type="Texture2D" uid="uid://dls1e0ur021sn" path="res://AsgoreSprites/BodySprites/spr_asgoreb_cape/spr_asgoreb_cape_1.png" id="152_cl5wd"]
+[ext_resource type="AudioStream" uid="uid://cqhtuidkyhgnd" path="res://snd/mus/mus_vsasgore.ogg" id="153_ffyoc"]
+[ext_resource type="Texture2D" uid="uid://dta5h6didpip7" path="res://AsgoreSprites/BodySprites/spr_asgoreb_arml.png" id="153_sn5n6"]
+[ext_resource type="Texture2D" uid="uid://b1o52gn3yc4in" path="res://AsgoreSprites/BodySprites/spr_asgoreb_armr.png" id="154_1gvry"]
+[ext_resource type="Texture2D" uid="uid://b3dewlu2k202e" path="res://BattleMenuSprites/spr_hpname.png" id="154_6s5sj"]
+[ext_resource type="Texture2D" uid="uid://dui0ohac161j0" path="res://AsgoreSprites/BodySprites/spr_asgoreb_armor.png" id="155_gmc50"]
+[ext_resource type="Texture2D" uid="uid://b3qbxbku7o6jm" path="res://AsgoreSprites/BodySprites/spr_asgoreb_dress.png" id="156_2l4h3"]
+[ext_resource type="Texture2D" uid="uid://c6po72qpfkc75" path="res://AsgoreSprites/BodySprites/spr_asgoreb_legs.png" id="157_dciif"]
+[ext_resource type="Texture2D" uid="uid://kuuestxwv28n" path="res://AsgoreSprites/BodySprites/spr_asgoreb_head1.png" id="158_ffyoc"]
+[ext_resource type="Texture2D" uid="uid://bb74tom6wodvw" path="res://AsgoreSprites/BodySprites/spr_asgoreb_feet.png" id="159_6s5sj"]
+[ext_resource type="Texture2D" uid="uid://durdbujqeb8o0" path="res://AsgoreSprites/BodySprites/spr_asgoreb_ballarm.png" id="160_k32w1"]
+[ext_resource type="Texture2D" uid="uid://cnph6xyik6bjl" path="res://BattleMenuSprites/spr_dmgnum/spr_dmgnum_0.png" id="160_xb6ao"]
+[ext_resource type="Texture2D" uid="uid://cn81hp6dq3sa5" path="res://AsgoreSprites/BodySprites/spr_asgorespear.png" id="161_yf7ki"]
+[ext_resource type="Texture2D" uid="uid://b7sio4paluysf" path="res://AsgoreSprites/BodySprites/spr_spearhandr.png" id="162_sn5n6"]
+[ext_resource type="Script" uid="uid://dvb6b46w1uci8" path="res://soul_movement.gd" id="162_vmor2"]
+[ext_resource type="Texture2D" uid="uid://bsmulojqameye" path="res://AsgoreSprites/BodySprites/spr_spearhandl.png" id="163_1gvry"]
+[ext_resource type="Texture2D" uid="uid://b71to5fx80opl" path="res://BattleMenuSprites/spr_strike/spr_strike_0.png" id="167_yurha"]
+[ext_resource type="Texture2D" uid="uid://5kmusm5sqrik" path="res://BattleMenuSprites/spr_strike/spr_strike_1.png" id="168_xb6ao"]
+[ext_resource type="Texture2D" uid="uid://c1dt0lfb1qjhe" path="res://BattleMenuSprites/spr_strike/spr_strike_2.png" id="169_vmor2"]
+[ext_resource type="Texture2D" uid="uid://sa0msgcnhxlw" path="res://BattleMenuSprites/spr_strike/spr_strike_3.png" id="170_w6i62"]
+[ext_resource type="Texture2D" uid="uid://bkeh1a5mprqr5" path="res://BattleMenuSprites/spr_strike/spr_strike_4.png" id="171_qmmtw"]
+[ext_resource type="Texture2D" uid="uid://wyctlej37qlc" path="res://BattleMenuSprites/spr_strike/spr_strike_5.png" id="172_gmp07"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wmmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_42q1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2we0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5wmmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_laf4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uf776")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2i8jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_paw4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7vluo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oc61k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bqp3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l8vr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_125jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_voptb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_21qi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o4i85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5acr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t1o58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_akgfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cl5wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sn5n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1gvry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_gmc50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2l4h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dciif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ffyoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6s5sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_k32w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yf7ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rpsrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_skmv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2abnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_yurha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_xb6ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_vmor2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_w6i62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qmmtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_gmp07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_17pq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_7hbig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_7p6k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_t3uko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_b5dhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_1p451")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vaujp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ggjqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_uwk1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7xaf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_pbno3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_hxse5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_sc5po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_1aaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8tgq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_n51ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_uxnlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ixfmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_pk6nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qcwed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_5kmpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_qv6tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_dqdtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_mvvg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_tycwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_fbfo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_yj1vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_05xeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_4t4ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_gqmge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2ix11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_k2r06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_vek70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_4ufos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_7a2nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_qol2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_10rnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_383cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ho7a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_ic374")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_3ubqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_liasq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_vvn45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_ercsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_wy2w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ysflj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_kv071")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_1dh2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_n5kvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_acu3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5oycq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_x1haj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_x2meo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_c3hgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_7ijgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_m56ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_8k5mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_u476f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_ekuja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_lxwwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_8q44d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_tcp28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_3fe8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_rins3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_wgiee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_nx3y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_pr4to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_sabb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_4na5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_cuqte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ea4oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_euw2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_aloxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_tyd35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_f5mxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_lb67b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_gbeab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_2gold")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_rl5q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_un6yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_aaqwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_75c25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_bmqka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_5jlft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_350q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_oyqcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_qpdnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_673wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_jkh5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_od7tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_tkj74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_wbelv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_ipy8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_y7x6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_ws8i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_p4xyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_jcpd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_cr505")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_dni2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_y46nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_5mdio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_3gv5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_vdxcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_mf47p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_rlsai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_8va2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_g2xn0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmor2"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gvry"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmc50"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6s5sj"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("167_yurha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_xb6ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_vmor2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_w6i62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_qmmtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_gmp07")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"slash",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k32w1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("151_ffyoc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("151_ffyoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_6s5sj")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 15.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yurha"]
+bg_color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb6ao"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpsrg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("151_akgfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_cl5wd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffyoc"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s5sj"]
+bg_color = Color(1, 0.941176, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oc61k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_paw4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_7vluo")
+}],
+"loop": true,
+"name": &"InvincibilityFrames",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_paw4w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AsgoreFight" type="Node2D"]
+script = ExtResource("1_2we0i")
+
+[node name="BackgroundBattle" type="AnimatedSprite2D" parent="."]
+position = Vector2(300, 219)
+scale = Vector2(1, 1.28994)
+sprite_frames = SubResource("SpriteFrames_5wmmi")
+frame_progress = 0.19076
+
+[node name="ButtonFocus" type="TextureRect" parent="BackgroundBattle"]
+offset_left = -301.0
+offset_top = 111.0
+offset_right = 300.0
+offset_bottom = 169.0
+
+[node name="BattleButtons" type="Control" parent="BackgroundBattle"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -301.0
+offset_top = 88.0
+offset_right = 301.0
+offset_bottom = 169.0
+
+[node name="FightBtn" type="Button" parent="BackgroundBattle/BattleButtons"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 21.0
+offset_right = 151.0
+offset_bottom = 71.0
+icon = ExtResource("146_uf776")
+
+[node name="ActBtn" type="Button" parent="BackgroundBattle/BattleButtons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.452
+anchor_top = 0.778
+anchor_right = 0.452
+anchor_bottom = 0.778
+offset_left = -89.104
+offset_top = -43.018
+offset_right = 28.896
+offset_bottom = 6.98199
+icon = ExtResource("147_2i8jo")
+flat = true
+
+[node name="ItemBtn" type="Button" parent="BackgroundBattle/BattleButtons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.424
+anchor_bottom = 0.346
+offset_left = 333.0
+offset_top = 20.0
+offset_right = 195.752
+offset_bottom = 41.974
+icon = ExtResource("148_paw4w")
+
+[node name="SndEffectPlay" type="AudioStreamPlayer" parent="BackgroundBattle"]
+
+[node name="Control" type="Sprite2D" parent="BackgroundBattle"]
+
+[node name="BattleTextBox" type="Panel" parent="BackgroundBattle"]
+offset_left = -270.0
+offset_top = -11.0
+offset_right = 266.0
+offset_bottom = 85.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vmor2")
+
+[node name="BattleText" type="Label" parent="BackgroundBattle"]
+offset_left = -263.0
+offset_top = -24.4725
+offset_right = 258.0
+offset_bottom = 24.5275
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+
+[node name="AsgoreSelect" type="Control" parent="BackgroundBattle"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -260.0
+offset_top = 17.8533
+offset_right = 262.0
+offset_bottom = 109.853
+
+[node name="AsgoreSelectFocus" type="TextureRect" parent="BackgroundBattle/AsgoreSelect"]
+layout_mode = 0
+offset_right = 518.0
+offset_bottom = 93.0
+
+[node name="AsgoreName" type="Button" parent="BackgroundBattle/AsgoreSelect"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -21.0
+offset_right = 172.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+text = " * Asgore"
+
+[node name="AsgoreHealthBar" type="ProgressBar" parent="BackgroundBattle/AsgoreSelect"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = -10.0
+offset_right = 288.0
+offset_bottom = 6.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1gvry")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gmc50")
+max_value = 3500.0
+value = 3200.0
+show_percentage = false
+
+[node name="VsAsgore" type="AudioStreamPlayer2D" parent="BackgroundBattle"]
+stream = ExtResource("153_ffyoc")
+parameters/looping = true
+
+[node name="actOptions" type="Control" parent="BackgroundBattle"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -259.0
+offset_top = -24.0
+offset_right = 260.0
+offset_bottom = 73.0
+
+[node name="ActSelectFocus" type="TextureRect" parent="BackgroundBattle/actOptions"]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 53.0
+
+[node name="checkBtn" type="Button" parent="BackgroundBattle/actOptions"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 20.0
+offset_right = 158.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+text = "* Check"
+
+[node name="talkBtn" type="Button" parent="BackgroundBattle/actOptions"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 20.0
+offset_right = 360.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+text = "* Talk"
+
+[node name="ItemSelect" type="Control" parent="BackgroundBattle"]
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_left = -257.0
+offset_right = 256.0
+offset_bottom = 97.0
+
+[node name="Page1" type="Control" parent="BackgroundBattle/ItemSelect"]
+anchors_preset = 0
+offset_left = -300.0
+offset_top = -169.0
+offset_right = -260.0
+offset_bottom = -129.0
+
+[node name="Page2" type="Control" parent="BackgroundBattle/ItemSelect"]
+visible = false
+anchors_preset = 0
+offset_left = -300.0
+offset_top = -169.0
+offset_right = -260.0
+offset_bottom = -129.0
+
+[node name="healEff" type="AudioStreamPlayer" parent="BackgroundBattle"]
+
+[node name="AttackBox" type="Control" parent="BackgroundBattle"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -262.0
+offset_top = -15.0
+offset_right = 263.0
+offset_bottom = 73.0
+
+[node name="Slash" type="AnimatedSprite2D" parent="BackgroundBattle/AttackBox"]
+z_index = 10
+position = Vector2(221, -120)
+sprite_frames = SubResource("SpriteFrames_6s5sj")
+
+[node name="AttackBar" type="Sprite2D" parent="BackgroundBattle/AttackBox"]
+position = Vector2(262.5, 53.5)
+scale = Vector2(0.957875, 0.723494)
+texture = ExtResource("150_dciif")
+
+[node name="AttackChoice" type="AnimatedSprite2D" parent="BackgroundBattle/AttackBox"]
+position = Vector2(4, 51.8234)
+scale = Vector2(1, 0.672269)
+sprite_frames = SubResource("SpriteFrames_k32w1")
+animation = &"selected"
+
+[node name="AttackHealth" type="ProgressBar" parent="BackgroundBattle/AttackBox"]
+visible = false
+z_index = 10
+layout_mode = 0
+offset_left = 164.0
+offset_top = -58.6468
+offset_right = 312.0
+offset_bottom = -46.6468
+theme_override_styles/background = SubResource("StyleBoxFlat_yurha")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xb6ao")
+max_value = 3500.0
+value = 3500.0
+show_percentage = false
+
+[node name="Node2D" type="Node2D" parent="BackgroundBattle"]
+
+[node name="AsgoreBody" type="Node2D" parent="."]
+position = Vector2(112, -9)
+scale = Vector2(1.5, 1.5)
+
+[node name="Cape" type="AnimatedSprite2D" parent="AsgoreBody"]
+position = Vector2(108, 89)
+sprite_frames = SubResource("SpriteFrames_rpsrg")
+frame_progress = 0.0427088
+
+[node name="ArmLeftBall" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(58, 75)
+texture = ExtResource("160_k32w1")
+
+[node name="ArmLeft" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(64, 61)
+texture = ExtResource("153_sn5n6")
+
+[node name="ArmRight" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(144, 57)
+texture = ExtResource("154_1gvry")
+
+[node name="Armor" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(104, 53)
+texture = ExtResource("155_gmc50")
+
+[node name="Dress" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(105, 94)
+texture = ExtResource("156_2l4h3")
+
+[node name="Legs" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(106, 108)
+texture = ExtResource("157_dciif")
+
+[node name="Face" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(104, 35)
+texture = ExtResource("158_ffyoc")
+
+[node name="Feet" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(106, 127)
+texture = ExtResource("159_6s5sj")
+
+[node name="ArmRightBall" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(144, 76)
+rotation = 0.872665
+texture = ExtResource("160_k32w1")
+
+[node name="Spear" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(145, 91)
+rotation = 0.483456
+texture = ExtResource("161_yf7ki")
+
+[node name="RightHand" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(137, 85)
+rotation = 0.483456
+texture = ExtResource("162_sn5n6")
+
+[node name="LeftHand" type="Sprite2D" parent="AsgoreBody"]
+position = Vector2(70, 51)
+rotation = 0.488692
+texture = ExtResource("163_1gvry")
+
+[node name="Digit3" type="Sprite2D" parent="AsgoreBody"]
+visible = false
+position = Vector2(87.3333, 77.3333)
+scale = Vector2(0.476191, 0.596647)
+texture = ExtResource("160_xb6ao")
+
+[node name="Digit2" type="Sprite2D" parent="AsgoreBody"]
+visible = false
+position = Vector2(104.666, 77.333)
+scale = Vector2(0.463, 0.597)
+texture = ExtResource("160_xb6ao")
+
+[node name="Digit1" type="Sprite2D" parent="AsgoreBody"]
+visible = false
+position = Vector2(120.667, 77.3334)
+scale = Vector2(0.476, 0.614)
+texture = ExtResource("160_xb6ao")
+
+[node name="Stats" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 323.0
+offset_right = 297.0
+offset_bottom = 363.0
+
+[node name="Name" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 8.00003
+offset_right = 131.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+text = "Chara"
+
+[node name="HP" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 6.0
+offset_right = 309.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+text = "20/20"
+
+[node name="LV" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 9.0
+offset_right = 62.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("149_1gvry")
+theme_override_font_sizes/font_size = 25
+text = "LV 1"
+
+[node name="HPBar" type="ProgressBar" parent="Stats"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 8.00003
+offset_right = 230.0
+offset_bottom = 28.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ffyoc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6s5sj")
+max_value = 20.0
+value = 15.0
+show_percentage = false
+
+[node name="HPSpr" type="Sprite2D" parent="Stats"]
+position = Vector2(159, 19.4326)
+scale = Vector2(1, 1.28994)
+texture = ExtResource("154_6s5sj")
+
+[node name="Soul" type="AnimatedSprite2D" parent="."]
+z_index = 10
+position = Vector2(-39, -30)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_oc61k")
+frame_progress = 0.640172
+script = ExtResource("162_vmor2")

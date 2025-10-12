@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1qlvijkswi7d"]
+
+[ext_resource type="Texture2D" uid="uid://4dslf1yamw65" path="res://Extras/spr_gameoverbg.png" id="1_eeur3"]
+[ext_resource type="Script" uid="uid://b1w1lnekrgpt6" path="res://gameover.gd" id="1_kctv7"]
+[ext_resource type="AudioStream" uid="uid://dm40it3kgyynt" path="res://snd/mus/mus_gameover.ogg" id="2_kctv7"]
+[ext_resource type="FontFile" uid="uid://dpdhulc4uo8og" path="res://Fonts/determination-mono.otf" id="3_2nw6q"]
+[ext_resource type="Texture2D" uid="uid://b0xa0wq20v3nw" path="res://BattleMenuSprites/spr_heart_battle_pl/spr_heart_battle_pl_0.png" id="5_2nw6q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3x71"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_kctv7")
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 600.0
+offset_bottom = 440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w3x71")
+
+[node name="GameOverSprite" type="Sprite2D" parent="Background"]
+position = Vector2(302, 144)
+texture = ExtResource("1_eeur3")
+
+[node name="Determination" type="AudioStreamPlayer2D" parent="Background"]
+position = Vector2(543, 373)
+stream = ExtResource("2_kctv7")
+parameters/looping = true
+
+[node name="AsgoreText" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 287.0
+offset_right = 458.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("3_2nw6q")
+theme_override_font_sizes/font_size = 30
+
+[node name="asgoreVoiceSpeech" type="AudioStreamPlayer2D" parent="Background"]
+
+[node name="Soul" type="Sprite2D" parent="Background"]
+position = Vector2(315, 272)
+scale = Vector2(-1.078, 1)
+texture = ExtResource("5_2nw6q")

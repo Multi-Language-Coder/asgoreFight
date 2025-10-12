@@ -1,4 +1,4 @@
-[gd_scene load_steps=190 format=3 uid="uid://27pxv6qafmn"]
+[gd_scene load_steps=215 format=3 uid="uid://27pxv6qafmn"]
 
 [ext_resource type="Script" uid="uid://pqrte4dsa6vu" path="res://asgore_fight.gd" id="1_2we0i"]
 [ext_resource type="Texture2D" uid="uid://didv8ujtpj268" path="res://BattleMenuSprites/AsgoreBattleBackground/8b3297f2-5a5d-4dcc-85b7-bf4997767d32-0.png" id="1_42q1s"]
@@ -177,6 +177,26 @@
 [ext_resource type="Texture2D" uid="uid://sa0msgcnhxlw" path="res://BattleMenuSprites/spr_strike/spr_strike_3.png" id="170_w6i62"]
 [ext_resource type="Texture2D" uid="uid://bkeh1a5mprqr5" path="res://BattleMenuSprites/spr_strike/spr_strike_4.png" id="171_qmmtw"]
 [ext_resource type="Texture2D" uid="uid://wyctlej37qlc" path="res://BattleMenuSprites/spr_strike/spr_strike_5.png" id="172_gmp07"]
+[ext_resource type="Texture2D" uid="uid://dp588433rq7lc" path="res://AsgoreSprites/BattleSprites/spr_asgore_flashsilhouette.png" id="174_7p6k4"]
+[ext_resource type="Texture2D" uid="uid://dab8mu07l8w8e" path="res://AsgoreSprites/BattleSprites/spr_asgore_eyeflash/spr_asgore_eyeflash_0.png" id="175_t3uko"]
+[ext_resource type="Texture2D" uid="uid://pwmjp3r40tml" path="res://AsgoreSprites/BattleSprites/spr_asgore_eyeflash/spr_asgore_eyeflash_1.png" id="176_b5dhs"]
+[ext_resource type="Texture2D" uid="uid://beo4bkix3p5d" path="res://AsgoreSprites/BattleSprites/spr_asgore_eyeflash/spr_asgore_eyeflash_2.png" id="177_1p451"]
+[ext_resource type="Texture2D" uid="uid://cbisatd4pt6go" path="res://AsgoreSprites/BattleSprites/spr_asgore_eyeflash/spr_asgore_eyeflash_3.png" id="178_vaujp"]
+[ext_resource type="Texture2D" uid="uid://c07i7ak1p2oi3" path="res://AsgoreSprites/BattleSprites/spr_asgore_eyeflash/spr_asgore_eyeflash_4.png" id="179_ggjqd"]
+[ext_resource type="Texture2D" uid="uid://dfnyuwmf3t4t4" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_0.png" id="180_7xaf3"]
+[ext_resource type="Texture2D" uid="uid://b3xg0ffd0c178" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_1.png" id="181_pbno3"]
+[ext_resource type="Texture2D" uid="uid://d2rfwams1pnui" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_2.png" id="182_hxse5"]
+[ext_resource type="Texture2D" uid="uid://cxjsw21i3dvbw" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_3.png" id="183_sc5po"]
+[ext_resource type="Texture2D" uid="uid://dn1n2cha5xyql" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_4.png" id="184_1aaux"]
+[ext_resource type="Texture2D" uid="uid://p2mkx4qmcgqg" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_5.png" id="185_8tgq6"]
+[ext_resource type="Texture2D" uid="uid://b1ap3xwhadcex" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_nospear/spr_asgore_swipe_nospear_6.png" id="186_n51ql"]
+[ext_resource type="Texture2D" uid="uid://cldk7brcf4sim" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_0.png" id="187_uxnlu"]
+[ext_resource type="Texture2D" uid="uid://cqm5gk4254dnu" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_1.png" id="188_ixfmx"]
+[ext_resource type="Texture2D" uid="uid://bw4ema85mtn4x" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_2.png" id="189_pk6nc"]
+[ext_resource type="Texture2D" uid="uid://c1ho78icim5pi" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_3.png" id="190_qcwed"]
+[ext_resource type="Texture2D" uid="uid://w44dq6agturk" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_4.png" id="191_5kmpe"]
+[ext_resource type="Texture2D" uid="uid://dtoefrdvdf2w3" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_5.png" id="192_qv6tn"]
+[ext_resource type="Texture2D" uid="uid://c8y4j51e0fu36" path="res://AsgoreSprites/BattleSprites/spr_asgore_swipe_spear/spr_asgore_swipe_spear_6.png" id="193_dqdtx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5wmmi"]
 animations = [{
@@ -618,7 +638,7 @@ animations = [{
 "speed": 25.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgfx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmor2"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 5
 border_width_top = 5
@@ -688,10 +708,135 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yurha"]
-bg_color = Color(0.27058825, 0.27058825, 0.27058825, 1)
+bg_color = Color(0.270588, 0.270588, 0.270588, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb6ao"]
 bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpsrg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("151_akgfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_cl5wd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxnlu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("180_7xaf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_pbno3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_hxse5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_sc5po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_1aaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_8tgq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_n51ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_7xaf3")
+}],
+"loop": false,
+"name": &"Swiping",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvvg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("187_uxnlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_ixfmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_pk6nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_qcwed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_5kmpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_qv6tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_dqdtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_uxnlu")
+}],
+"loop": false,
+"name": &"TridentSwipe",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwk1v"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("175_t3uko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_b5dhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_1p451")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_vaujp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_ggjqd")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"flash",
+"speed": 15.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffyoc"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s5sj"]
+bg_color = Color(1, 0.941176, 0, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oc61k"]
 animations = [{
@@ -715,32 +860,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rpsrg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("151_akgfx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("152_cl5wd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 2.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmor2"]
+size = Vector2(10.9091, 7.27273)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffyoc"]
-bg_color = Color(1, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s5sj"]
-bg_color = Color(1, 0.9411765, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxnlu"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="AsgoreFight" type="Node2D"]
+z_as_relative = false
 script = ExtResource("1_2we0i")
 
 [node name="BackgroundBattle" type="AnimatedSprite2D" parent="."]
+z_index = -3
 position = Vector2(300, 219)
-scale = Vector2(1, 1.2899408)
+scale = Vector2(1, 1.28994)
 sprite_frames = SubResource("SpriteFrames_5wmmi")
 frame_progress = 0.19076
 
@@ -776,7 +909,7 @@ anchor_bottom = 0.778
 offset_left = -89.104
 offset_top = -43.018
 offset_right = 28.896
-offset_bottom = 6.98199
+offset_bottom = 6.982
 icon = ExtResource("147_2i8jo")
 flat = true
 
@@ -795,29 +928,31 @@ icon = ExtResource("148_paw4w")
 
 [node name="Control" type="Sprite2D" parent="BackgroundBattle"]
 
-[node name="BattleTextBox" type="PanelContainer" parent="BackgroundBattle"]
-offset_left = -266.0
-offset_top = -17.0
-offset_right = 267.0
-offset_bottom = 80.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_akgfx")
+[node name="BattleTextBox" type="Panel" parent="BackgroundBattle"]
+offset_left = -270.0
+offset_top = -11.0
+offset_right = 266.0
+offset_bottom = 85.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vmor2")
 
 [node name="BattleText" type="Label" parent="BackgroundBattle"]
+z_index = 10
 offset_left = -263.0
-offset_top = -24.472458
+offset_top = -24.4725
 offset_right = 258.0
-offset_bottom = 24.527542
+offset_bottom = 24.5275
 theme_override_fonts/font = ExtResource("149_1gvry")
 theme_override_font_sizes/font_size = 25
 
 [node name="AsgoreSelect" type="Control" parent="BackgroundBattle"]
 visible = false
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 offset_left = -260.0
-offset_top = 17.853256
+offset_top = 17.8533
 offset_right = 262.0
-offset_bottom = 109.85326
+offset_bottom = 109.853
 
 [node name="AsgoreSelectFocus" type="TextureRect" parent="BackgroundBattle/AsgoreSelect"]
 layout_mode = 0
@@ -835,6 +970,7 @@ theme_override_font_sizes/font_size = 25
 text = " * Asgore"
 
 [node name="AsgoreHealthBar" type="ProgressBar" parent="BackgroundBattle/AsgoreSelect"]
+visible = false
 layout_mode = 0
 offset_left = 191.0
 offset_top = -10.0
@@ -852,6 +988,7 @@ parameters/looping = true
 
 [node name="actOptions" type="Control" parent="BackgroundBattle"]
 visible = false
+z_index = 7
 layout_mode = 3
 anchors_preset = 0
 offset_left = -259.0
@@ -894,6 +1031,7 @@ offset_right = 256.0
 offset_bottom = 97.0
 
 [node name="Page1" type="Control" parent="BackgroundBattle/ItemSelect"]
+z_index = 10
 anchors_preset = 0
 offset_left = -300.0
 offset_top = -169.0
@@ -902,6 +1040,7 @@ offset_bottom = -129.0
 
 [node name="Page2" type="Control" parent="BackgroundBattle/ItemSelect"]
 visible = false
+z_index = 10
 anchors_preset = 0
 offset_left = -300.0
 offset_top = -169.0
@@ -912,6 +1051,7 @@ offset_bottom = -129.0
 
 [node name="AttackBox" type="Control" parent="BackgroundBattle"]
 visible = false
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 offset_left = -262.0
@@ -925,13 +1065,13 @@ position = Vector2(221, -120)
 sprite_frames = SubResource("SpriteFrames_6s5sj")
 
 [node name="AttackBar" type="Sprite2D" parent="BackgroundBattle/AttackBox"]
-position = Vector2(262.5, 46.910553)
-scale = Vector2(0.957875, 0.7841644)
+position = Vector2(262.5, 53.5)
+scale = Vector2(0.957875, 0.723494)
 texture = ExtResource("150_dciif")
 
 [node name="AttackChoice" type="AnimatedSprite2D" parent="BackgroundBattle/AttackBox"]
-position = Vector2(9, 47.185783)
-scale = Vector2(1, 0.68459713)
+position = Vector2(518, 51.8234)
+scale = Vector2(1, 0.672269)
 sprite_frames = SubResource("SpriteFrames_k32w1")
 animation = &"selected"
 
@@ -940,28 +1080,25 @@ visible = false
 z_index = 10
 layout_mode = 0
 offset_left = 164.0
-offset_top = -58.64679
+offset_top = -58.6468
 offset_right = 312.0
-offset_bottom = -46.646782
+offset_bottom = -46.6468
 theme_override_styles/background = SubResource("StyleBoxFlat_yurha")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xb6ao")
 max_value = 3500.0
 value = 3500.0
 show_percentage = false
 
-[node name="Soul" type="AnimatedSprite2D" parent="."]
-z_index = 10
-position = Vector2(-39, -30)
-scale = Vector2(1.1, 1.1)
-sprite_frames = SubResource("SpriteFrames_oc61k")
-frame_progress = 0.640172
-script = ExtResource("162_vmor2")
+[node name="Node2D" type="Node2D" parent="BackgroundBattle"]
 
 [node name="AsgoreBody" type="Node2D" parent="."]
-position = Vector2(112.00001, -9)
+z_as_relative = false
+position = Vector2(112, -9)
 scale = Vector2(1.5, 1.5)
 
 [node name="Cape" type="AnimatedSprite2D" parent="AsgoreBody"]
+z_index = -3
+z_as_relative = false
 position = Vector2(108, 89)
 sprite_frames = SubResource("SpriteFrames_rpsrg")
 frame_progress = 0.0427088
@@ -987,6 +1124,7 @@ position = Vector2(105, 94)
 texture = ExtResource("156_2l4h3")
 
 [node name="Legs" type="Sprite2D" parent="AsgoreBody"]
+z_as_relative = false
 position = Vector2(106, 108)
 texture = ExtResource("157_dciif")
 
@@ -995,10 +1133,13 @@ position = Vector2(104, 35)
 texture = ExtResource("158_ffyoc")
 
 [node name="Feet" type="Sprite2D" parent="AsgoreBody"]
+z_index = -3
+z_as_relative = false
 position = Vector2(106, 127)
 texture = ExtResource("159_6s5sj")
 
 [node name="ArmRightBall" type="Sprite2D" parent="AsgoreBody"]
+z_index = -3
 position = Vector2(144, 76)
 rotation = 0.872665
 texture = ExtResource("160_k32w1")
@@ -1020,21 +1161,59 @@ texture = ExtResource("163_1gvry")
 
 [node name="Digit3" type="Sprite2D" parent="AsgoreBody"]
 visible = false
-position = Vector2(87.333336, 77.333336)
-scale = Vector2(0.4761905, 0.5966469)
+position = Vector2(87.3333, 77.3333)
+scale = Vector2(0.476191, 0.596647)
 texture = ExtResource("160_xb6ao")
 
 [node name="Digit2" type="Sprite2D" parent="AsgoreBody"]
 visible = false
-position = Vector2(104.666374, 77.33299)
+position = Vector2(104.666, 77.333)
 scale = Vector2(0.463, 0.597)
 texture = ExtResource("160_xb6ao")
 
 [node name="Digit1" type="Sprite2D" parent="AsgoreBody"]
 visible = false
-position = Vector2(120.66667, 77.3334)
+position = Vector2(120.667, 77.3334)
 scale = Vector2(0.476, 0.614)
 texture = ExtResource("160_xb6ao")
+
+[node name="AsgoreSwipe" type="AnimatedSprite2D" parent="AsgoreBody"]
+visible = false
+z_index = 1
+position = Vector2(110, 70.6667)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_uxnlu")
+animation = &"Swiping"
+
+[node name="TridentSwipe" type="AnimatedSprite2D" parent="AsgoreBody/AsgoreSwipe"]
+z_index = 11
+position = Vector2(-25.9999, -3.33334)
+sprite_frames = SubResource("SpriteFrames_mvvg6")
+animation = &"TridentSwipe"
+frame = 7
+frame_progress = 1.0
+
+[node name="Sillohuette" type="Sprite2D" parent="AsgoreBody"]
+show_behind_parent = true
+position = Vector2(102, 70.6667)
+scale = Vector2(1, 1)
+texture = ExtResource("174_7p6k4")
+
+[node name="RightEye" type="AnimatedSprite2D" parent="AsgoreBody/Sillohuette"]
+position = Vector2(-6, -30.6667)
+sprite_frames = SubResource("SpriteFrames_uwk1v")
+animation = &"flash"
+
+[node name="LeftEye" type="AnimatedSprite2D" parent="AsgoreBody/Sillohuette"]
+position = Vector2(10, -30.6667)
+sprite_frames = SubResource("SpriteFrames_uwk1v")
+animation = &"flash"
+frame = 5
+frame_progress = 1.0
+
+[node name="RightEye2" type="AnimatedSprite2D" parent="AsgoreBody/Sillohuette"]
+position = Vector2(-6, -30.6667)
+sprite_frames = SubResource("SpriteFrames_uwk1v")
 
 [node name="Stats" type="Control" parent="."]
 layout_mode = 3
@@ -1047,9 +1226,9 @@ offset_bottom = 363.0
 [node name="Name" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 69.0
-offset_top = 8.0000305
+offset_top = 8.00003
 offset_right = 131.0
-offset_bottom = 31.00003
+offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("149_1gvry")
 theme_override_font_sizes/font_size = 25
 text = "Chara"
@@ -1077,9 +1256,9 @@ text = "LV 1"
 [node name="HPBar" type="ProgressBar" parent="Stats"]
 layout_mode = 0
 offset_left = 187.0
-offset_top = 8.0000305
+offset_top = 8.00003
 offset_right = 230.0
-offset_bottom = 28.00003
+offset_bottom = 28.0
 theme_override_styles/background = SubResource("StyleBoxFlat_ffyoc")
 theme_override_styles/fill = SubResource("StyleBoxFlat_6s5sj")
 max_value = 20.0
@@ -1087,6 +1266,29 @@ value = 15.0
 show_percentage = false
 
 [node name="HPSpr" type="Sprite2D" parent="Stats"]
-position = Vector2(159, 19.432587)
-scale = Vector2(1, 1.2899408)
+position = Vector2(159, 19.4326)
+scale = Vector2(1, 1.28994)
 texture = ExtResource("154_6s5sj")
+
+[node name="Soul" type="AnimatedSprite2D" parent="."]
+z_index = 10
+position = Vector2(-39, -30)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_oc61k")
+animation = &"InvincibilityFrames"
+script = ExtResource("162_vmor2")
+
+[node name="SoulHitbox" type="Area2D" parent="Soul"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soul/SoulHitbox"]
+shape = SubResource("RectangleShape2D_vmor2")
+
+[node name="stupidPanel" type="Panel" parent="."]
+offset_right = 600.0
+offset_bottom = 440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uxnlu")
+
+[connection signal="frame_changed" from="AsgoreBody/AsgoreSwipe" to="." method="_on_asgore_swipe_frame_changed"]
+[connection signal="area_entered" from="Soul/SoulHitbox" to="." method="_on_soul_hitbox_area_entered"]
+[connection signal="area_exited" from="Soul/SoulHitbox" to="." method="_on_soul_hitbox_area_exited"]

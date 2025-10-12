@@ -1,9 +1,31 @@
 [gd_scene load_steps=3 format=3 uid="uid://dce177tan4gch"]
 
 [ext_resource type="Texture2D" uid="uid://356gubypju3q" path="res://AsgoreSprites/BattleSprites/spr_firebullet/spr_firebullet_0.png" id="1_wexf5"]
-[ext_resource type="Script" uid="uid://dnuenlqbjm58" path="res://pelletscript.gd" id="2_3f2cq"]
+
+[sub_resource type="GDScript" id="GDScript_hry2e"]
+script/source = "# pellet_behavior.gd
+extends Sprite2D
+
+enum State { IDLE, HOMING }
+var state = State.IDLE
+
+var move_direction: Vector2 = Vector2.ZERO
+var move_speed: float = 250.0
+
+func _process(delta: float):
+	# Only move if in the HOMING state
+	if state == State.HOMING:
+		position += move_direction * move_speed * delta
+
+# This new function will be called by the main script to launch the pellet
+func release_and_home(target_position: Vector2):
+	# Calculate the direction from the pellet to the target
+	move_direction = global_position.direction_to(target_position)
+	state = State.HOMING
+"
 
 [node name="FirePellet" type="Area2D"]
+script = SubResource("GDScript_hry2e")
 
 [node name="Fireball" type="Sprite2D" parent="."]
 texture = ExtResource("1_wexf5")
@@ -11,4 +33,3 @@ texture = ExtResource("1_wexf5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Node" type="Node" parent="."]
-script = ExtResource("2_3f2cq")

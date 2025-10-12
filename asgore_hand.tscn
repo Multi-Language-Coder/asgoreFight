@@ -7,6 +7,7 @@
 script = ExtResource("1_xswyb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 6
 position = Vector2(171, 205)
 texture = ExtResource("2_c3dfc")
 

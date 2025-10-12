@@ -1,0 +1,242 @@
+[gd_scene load_steps=33 format=3 uid="uid://7k8mgx53osa3"]
+
+[ext_resource type="Script" uid="uid://bjq4rh41e4dpp" path="res://bergentruckung.gd" id="1_emjvo"]
+[ext_resource type="Texture2D" uid="uid://dgj4vmkxx5oer" path="res://Bergentruckung/spr_asgore_prebrandish.png" id="1_m1mbv"]
+[ext_resource type="Texture2D" uid="uid://vgs7aqjxnlrw" path="res://Bergentruckung/spr_asgore_bface/spr_asgore_bface_0.png" id="2_lgmef"]
+[ext_resource type="AudioStream" uid="uid://d3foulidrocu8" path="res://snd/mus/mus_bergentruckung.ogg" id="3_gpd5i"]
+[ext_resource type="Texture2D" uid="uid://d2ema4o5t5i8j" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_0.png" id="3_xdeyq"]
+[ext_resource type="Texture2D" uid="uid://do8tx8ioa0a8q" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_1.png" id="4_dpibm"]
+[ext_resource type="Texture2D" uid="uid://oohhlfln3xw" path="res://BattleMenuSprites/spr_fightbt/spr_fightbt_0.png" id="4_emjvo"]
+[ext_resource type="Texture2D" uid="uid://ccbn4gap2uv04" path="res://BattleMenuSprites/spr_talkbt/spr_talkbt_0.png" id="5_2arbl"]
+[ext_resource type="Texture2D" uid="uid://bbsca0ffbth14" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_2.png" id="5_5wqqn"]
+[ext_resource type="Texture2D" uid="uid://dp588433rq7lc" path="res://AsgoreSprites/BattleSprites/spr_asgore_flashsilhouette.png" id="5_l5lrn"]
+[ext_resource type="Texture2D" uid="uid://b0avmol70ffqy" path="res://BattleMenuSprites/spr_itembt/spr_itembt_0.png" id="6_k0q0c"]
+[ext_resource type="Texture2D" uid="uid://d3snndtemvrpn" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_3.png" id="6_l5lrn"]
+[ext_resource type="Texture2D" uid="uid://c7bxhtcjrygwj" path="res://BattleMenuSprites/spr_sparebt/spr_sparebt_0.png" id="7_7tefp"]
+[ext_resource type="Script" uid="uid://batlisw0tcb4w" path="res://ghost_effect.gd" id="7_dpibm"]
+[ext_resource type="Texture2D" uid="uid://bdp6ja0mgk6be" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_4.png" id="7_gpdch"]
+[ext_resource type="FontFile" uid="uid://dpdhulc4uo8og" path="res://Fonts/determination-mono.otf" id="8_gpd5i"]
+[ext_resource type="Texture2D" uid="uid://ccw4pc6fph3y6" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_5.png" id="8_ms6xq"]
+[ext_resource type="Texture2D" uid="uid://dl4m1lojvbtsb" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_6.png" id="9_1v75x"]
+[ext_resource type="Texture2D" uid="uid://b3dewlu2k202e" path="res://BattleMenuSprites/spr_hpname.png" id="9_emjvo"]
+[ext_resource type="Texture2D" uid="uid://dmpoofiqin1tb" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_7.png" id="10_xojfp"]
+[ext_resource type="Texture2D" uid="uid://dibgqa5v6jed8" path="res://Extras/spr_blconsm2.png" id="11_2arbl"]
+[ext_resource type="Texture2D" uid="uid://byhbpcihed3wr" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_8.png" id="11_y6agv"]
+[ext_resource type="Texture2D" uid="uid://dpuhdust41huh" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_9.png" id="12_n82x2"]
+[ext_resource type="Texture2D" uid="uid://dmmpu1diiclxt" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_10.png" id="13_qg1it"]
+[ext_resource type="Texture2D" uid="uid://44t7mx2dv7kf" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_11.png" id="14_wmfbn"]
+[ext_resource type="Texture2D" uid="uid://b1q27swdejr2s" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_12.png" id="15_s7lu3"]
+[ext_resource type="Texture2D" uid="uid://crf2n3wd52gjb" path="res://Extras/spr_asgore_brandish/spr_asgore_brandish_13.png" id="16_dw3qa"]
+[ext_resource type="Texture2D" uid="uid://cn81hp6dq3sa5" path="res://AsgoreSprites/BodySprites/spr_asgorespear.png" id="19_5wqqn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmdlh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m1mbv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xdeyq")
+}],
+"loop": false,
+"name": &"focused",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_l5lrn")
+}],
+"loop": true,
+"name": &"sillohuete",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dpibm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5wqqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l5lrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gpdch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ms6xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1v75x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xojfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y6agv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n82x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qg1it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wmfbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s7lu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dw3qa")
+}],
+"loop": false,
+"name": &"spearUnleash",
+"speed": 10.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80dun"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2arbl"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0q0c"]
+bg_color = Color(1, 0.941176, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_emjvo")
+
+[node name="MovingBody" type="Area2D" parent="."]
+z_index = 2
+script = ExtResource("7_dpibm")
+
+[node name="Asgore" type="AnimatedSprite2D" parent="MovingBody"]
+position = Vector2(280, 115)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_gmdlh")
+
+[node name="Face" type="Sprite2D" parent="MovingBody/Asgore"]
+z_index = 100
+position = Vector2(8, -45.3333)
+texture = ExtResource("2_lgmef")
+
+[node name="Spear" type="Sprite2D" parent="MovingBody/Asgore"]
+z_index = 100
+position = Vector2(25, -80)
+rotation = 1.5708
+texture = ExtResource("19_5wqqn")
+
+[node name="GhostTimer" type="Timer" parent="MovingBody"]
+wait_time = 0.05
+
+[node name="StatBar" type="PanelContainer" parent="."]
+offset_left = 1.0
+offset_top = 331.0
+offset_right = 601.0
+offset_bottom = 441.0
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 599.0
+offset_bottom = 441.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_80dun")
+
+[node name="Bergentruckung" type="AudioStreamPlayer2D" parent="Background"]
+stream = ExtResource("3_gpd5i")
+
+[node name="BattleUIHolder" type="PanelContainer" parent="Background"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 331.0
+offset_right = 601.0
+offset_bottom = 441.0
+
+[node name="Fight" type="Sprite2D" parent="Background/BattleUIHolder"]
+position = Vector2(70, 80)
+texture = ExtResource("4_emjvo")
+
+[node name="Act" type="Sprite2D" parent="Background/BattleUIHolder"]
+position = Vector2(230, 80)
+texture = ExtResource("5_2arbl")
+
+[node name="Item" type="Sprite2D" parent="Background/BattleUIHolder"]
+position = Vector2(380, 80)
+texture = ExtResource("6_k0q0c")
+
+[node name="Mercy" type="Sprite2D" parent="Background/BattleUIHolder"]
+position = Vector2(530, 80)
+texture = ExtResource("7_7tefp")
+
+[node name="Name" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 350.0
+offset_right = 147.0
+offset_bottom = 373.0
+theme_override_fonts/font = ExtResource("8_gpd5i")
+theme_override_font_sizes/font_size = 25
+text = "Chara"
+
+[node name="HP" type="Label" parent="."]
+offset_left = 309.0
+offset_top = 350.0
+offset_right = 397.0
+offset_bottom = 373.0
+theme_override_fonts/font = ExtResource("8_gpd5i")
+theme_override_font_sizes/font_size = 25
+text = "20 / 20"
+
+[node name="LV" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 350.0
+offset_right = 76.0
+offset_bottom = 373.0
+theme_override_fonts/font = ExtResource("8_gpd5i")
+theme_override_font_sizes/font_size = 25
+text = "LV 1"
+
+[node name="HPBar" type="ProgressBar" parent="."]
+offset_left = 267.0
+offset_top = 352.0
+offset_right = 296.0
+offset_bottom = 372.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2arbl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k0q0c")
+max_value = 20.0
+value = 15.0
+show_percentage = false
+
+[node name="HPSpr" type="Sprite2D" parent="."]
+position = Vector2(245, 362)
+scale = Vector2(1, 1.28994)
+texture = ExtResource("9_emjvo")
+
+[node name="StartupText" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 232.0
+offset_right = 445.0
+offset_bottom = 319.0
+theme_override_fonts/font = ExtResource("8_gpd5i")
+theme_override_font_sizes/font_size = 25
+
+[node name="DialogueBoxAsgore" type="Sprite2D" parent="."]
+position = Vector2(500, 126)
+texture = ExtResource("11_2arbl")
+flip_h = true
+
+[node name="AsgoreText" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 80.0
+offset_right = 546.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_gpd5i")
+theme_override_font_sizes/font_size = 15
+
+[node name="asgoreVoice" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="timeout" from="MovingBody/GhostTimer" to="MovingBody" method="_on_ghost_timer_timeout"]
