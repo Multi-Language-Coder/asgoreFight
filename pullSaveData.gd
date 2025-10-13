@@ -42,7 +42,7 @@ static func load_game():
 	file.close()
 	print("Game loaded! Score: ", deaths)
 	return deaths
-func delete_save_file():
+static func delete_save_file():
 	var save_path = "user://savegame.dat"
 	
 	# 1. First, always check if the file exists.

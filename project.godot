@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Asgore"
-run/main_scene="uid://7k8mgx53osa3"
+run/main_scene="uid://cvpam5tk8fsiv"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/max_fps=30
 config/icon="res://icon.svg"

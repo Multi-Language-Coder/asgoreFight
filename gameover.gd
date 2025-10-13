@@ -47,7 +47,7 @@ func create_heart_shatter():
 func displayText(text):
 	asgoreTalk.text = ""
 	for char in text:
-		await get_tree().create_timer(0.04).timeout
+		await get_tree().create_timer(0.09).timeout
 		if (char != " "):
 			playEffect(asgoreVoice)
 		asgoreTalk.text = asgoreTalk.text + char
@@ -77,7 +77,7 @@ func _process(delta):
 	elif Input.is_action_just_pressed("Z") && asgoreTalk.text == asgoreTexts[1]:
 		displayText("")
 	elif Input.is_action_just_pressed("Z") && asgoreTalk.text == "":
-		get_tree().change_scene_to_file("res://bergentruckung.tscn")
+		get_tree().change_scene_to_file("res://difficultySetting.tscn")
 	for shard in shards:
 		# Get the shard's current velocity
 		var velocity = shard.get_meta("velocity")

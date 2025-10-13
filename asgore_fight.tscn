@@ -1181,7 +1181,6 @@ texture = ExtResource("160_xb6ao")
 visible = false
 z_index = 1
 position = Vector2(110, 70.6667)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_uxnlu")
 animation = &"Swiping"
 
@@ -1196,7 +1195,6 @@ frame_progress = 1.0
 [node name="Sillohuette" type="Sprite2D" parent="AsgoreBody"]
 show_behind_parent = true
 position = Vector2(102, 70.6667)
-scale = Vector2(1, 1)
 texture = ExtResource("174_7p6k4")
 
 [node name="RightEye" type="AnimatedSprite2D" parent="AsgoreBody/Sillohuette"]
@@ -1288,6 +1286,9 @@ shape = SubResource("RectangleShape2D_vmor2")
 offset_right = 600.0
 offset_bottom = 440.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uxnlu")
+
+[node name="OscilatingNode" type="Node2D" parent="."]
+position = Vector2(-107, -107)
 
 [connection signal="frame_changed" from="AsgoreBody/AsgoreSwipe" to="." method="_on_asgore_swipe_frame_changed"]
 [connection signal="area_entered" from="Soul/SoulHitbox" to="." method="_on_soul_hitbox_area_entered"]

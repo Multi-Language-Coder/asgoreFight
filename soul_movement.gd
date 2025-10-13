@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 # Movement speed
 const SPEED: float = 200.0
-@onready var main_game_script = get_tree().get_root().get_node("AsgoreFight")
+@onready var main_game_script = get_tree().get_root().get_node("AsgoreFight") 
 # Reference to the attack box boundaries
 var attack_box_rect: Rect2
 var velocity: Vector2
@@ -17,7 +17,7 @@ func stop_soul_control():
 
 func _process(delta: float):
 	# 1. Capture Input Direction
-	if main_game_script and (main_game_script.menuStatus == "asgore"):
+	if (main_game_script and (main_game_script.menuStatus == "asgore")):
 		
 		var direction: Vector2 = Input.get_vector(
 			"ui_left", "ui_right", "ui_up", "ui_down"
@@ -26,10 +26,8 @@ func _process(delta: float):
 		# 2. Calculate new position
 		var velocity2: Vector2 = direction * SPEED
 		if Input.is_action_pressed("X"):
-			print("worked")
 			velocity2 = velocity2/3
 		elif Input.is_action_just_released("X"):
-			print("worked")
 			velocity = velocity*3
 		velocity = velocity2
 		var new_position: Vector2 = position + velocity2 * delta

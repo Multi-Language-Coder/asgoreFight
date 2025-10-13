@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvpam5tk8fsiv"]
+
+[ext_resource type="FontFile" uid="uid://dpdhulc4uo8og" path="res://Fonts/determination-mono.otf" id="1_5ldem"]
+[ext_resource type="Script" uid="uid://b2flc5o4ytp7a" path="res://difficulty_setting.gd" id="1_emsme"]
+[ext_resource type="Texture2D" uid="uid://b0xa0wq20v3nw" path="res://BattleMenuSprites/spr_heart_battle_pl/spr_heart_battle_pl_0.png" id="3_1a2o0"]
+[ext_resource type="AudioStream" uid="uid://ck5v8ymeikce1" path="res://snd/mus/mus_smallshock.ogg" id="4_jqetp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yjg6"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_emsme")
+
+[node name="Background" type="Panel" parent="."]
+custom_minimum_size = Vector2(600, 440)
+offset_right = 26.0
+offset_bottom = 21.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6yjg6")
+
+[node name="NormalModeSelect" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 210.0
+offset_right = 305.0
+offset_bottom = 241.0
+text = "* Normal Mode Asgore"
+
+[node name="Title" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 55.0
+offset_right = 474.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("1_5ldem")
+theme_override_font_sizes/font_size = 50
+text = "Bergentruckung
+   Simulator"
+
+[node name="Label" type="Label" parent="Background/Title"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 100.0
+offset_right = 260.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("1_5ldem")
+theme_override_font_sizes/font_size = 15
+text = "By Multi-Language-Coder"
+
+[node name="HardModeSelect" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 260.0
+offset_right = 305.0
+offset_bottom = 291.0
+text = "* Hard Mode Asgore"
+
+[node name="TogoreSelect" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 310.0
+offset_right = 305.0
+offset_bottom = 341.0
+text = "* Togore Mode =)"
+
+[node name="DeleteSave" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 210.0
+offset_right = 535.0
+offset_bottom = 241.0
+text = "* Delete Save"
+
+[node name="Soul" type="Sprite2D" parent="Background"]
+texture = ExtResource("3_1a2o0")
+
+[node name="sndEffectPlayer" type="AudioStreamPlayer2D" parent="Background"]
+
+[node name="ComingSoon" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 389.0
+offset_right = 504.0
+offset_bottom = 434.0
+theme_override_fonts/font = ExtResource("1_5ldem")
+theme_override_font_sizes/font_size = 50
+text = " Coming Soon!"
+
+[node name="SmallShock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_jqetp")
+volume_db = 4.0
+parameters/looping = true

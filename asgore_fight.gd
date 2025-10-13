@@ -13,6 +13,7 @@ extends Node2D
 @onready var Feet = $AsgoreBody/Feet
 @onready var RightHand = $AsgoreBody/RightHand
 @onready var LeftHand = $AsgoreBody/LeftHand
+@onready var referenceOscilator = $OscilatingNode
 #Something Else
 @onready var asgoreFight = get_node("BackgroundBattle")
 @onready var fightBtn = get_node("BackgroundBattle/BattleButtons/FightBtn")
@@ -154,7 +155,7 @@ const ATTACK_BOX_SIZE: Vector2 = Vector2(190, 130)
 # Offset: -80 is half of 160 (for X); -60 is half of 120 (for Y). 
 # This centers the box relative to the parent (BackgroundBattle at 300, 219).
 const ATTACK_BOX_OFFSET: Vector2 = Vector2(-130, -50)
-var iteration = 1
+var iteration = 0
 var menuStatus = "base"
 var itemInv = ["Pie","Face Steak","Leg Hero","Leg Hero1","Leg Hero2","Cinnabun","Cinnabun1", "Cinnabun2"]
 
@@ -177,6 +178,7 @@ var original_size = Vector2.ZERO
 var startingLocation = [Vector2(42.0, 266.5),Vector2(556.0, 266.5)]
 var side = false
 var deaths = save.load_game()
+var turnNum : int = 1
 func toWords(num: int):
 	match num:
 		1:
@@ -363,20 +365,47 @@ func returnDigits(dmg) -> Array[Texture2D]:
 	return resultArray
 	
 func startAsgoreLoop():
+	var did=false
 	prepare_attack_box_smooth()
 	await get_tree().create_timer(0.4).timeout
 	soul.show()
 	soul.global_position = Vector2(260,240)
 	var global_attack_box_rect = battleTextBox.get_global_rect()
 	soul.start_soul_control(global_attack_box_rect)
-	#swipeAtk(3)
+	var box_center = battleTextBox.get_rect().get_center()
+	box_center.x+=130
+	box_center.y+=100
+	if iteration == 0 && did == false:
+		start_hand_swipe_attack()
+		
+		iteration+=1
+		did = true
+	if iteration == 1 && did == false:
+		start_hand_swipe_side_attack()
+		iteration+=1
+		did = true
+	if iteration == 2 && did == false:
+		swipeAtk(3)
+		iteration+=1
+		did=true
+	if iteration == 3 && did == false:
+		fire_burst_attack(referenceOscilator, 15, 120.0,0.4,15)
+		iteration=0
+		did=true
+	#if iteration == 4 && did == false:
+	#	fire_ring_implosion(30, 150.0, 100.0, box_center)
+	#	did=true
+	#	iteration = 0
 	#start_fire_rain_attack(5)
-	#start_hand_swipe_attack()
-	start_hand_swipe_side_attack()
+	#
+	#
+	
+	await get_tree().create_timer(0.3)
 	if iteration == 1:
 		print("First Attack")
 		
 func startPlayerTurn():
+	turnNum +=1
 	for children in battleTextBox.get_children():
 		children.queue_free()
 	battleTextBox.z_index = 0
@@ -387,6 +416,8 @@ func startPlayerTurn():
 	battleText.show()
 	clearText()
 	displayText(battleTexts[1])
+	if turnNum >= 19:
+		asgoreStats["trueDef"]-=2
 func _input(event):
 	# Check if the event is a key press event
 	if event is InputEventKey:
@@ -599,9 +630,15 @@ func _input(event):
 				digit2.hide()
 				digit3.hide()
 				AttackHealth.hide()
-				startAsgoreLoop()
-				await get_tree().create_timer(7).timeout
-				startPlayerTurn()
+				if asgore_is_defeated:
+				# If he's defeated, call a function to handle the ending
+					start_asgore_defeat_sequence()
+				else:
+					# Otherwise, continue the battle normally
+					menuStatus = "asgore"
+					startAsgoreLoop()
+					await get_tree().create_timer(7).timeout
+					startPlayerTurn()
 				
 			if menuStatus == "itemSelect":
 				# Define button references using safe checks for clarity
@@ -711,16 +748,30 @@ func _input(event):
 			if event.keycode == KEY_ESCAPE:
 				print("Game menu requested!")
 			#print(focBtn.name)
+var basePlayerDmg = 10
+var weaponDmg = 99
+var totalAtk = basePlayerDmg + weaponDmg
+var asgore_is_defeated: bool = false
 func getPlayerDamage() -> int:
 	var dmg: int = 0
+	# --- Damage calculation logic (this part is unchanged) ---
 	if AttackChoice.global_position.x > 296 && AttackChoice.global_position.x < 306:
-		dmg = round((25-asgoreStats["trueDef"]+randi_range(1, 2))*2.2)
-		asgoreStats["hp"]-=dmg
+		dmg = round(((basePlayerDmg+weaponDmg)-asgoreStats["trueDef"]+randi_range(1, 2))*2.2)
 	else:
 		var width: float = AttackBar.get_rect().size.x
 		var distanceDifference = abs(AttackChoice.global_position.x-301)
-		dmg = round((25-asgoreStats["trueDef"]+randi_range(1, 2)) * (1 - (distanceDifference/width)) * 2)
-		asgoreStats["hp"]-=dmg
+		dmg = round(((basePlayerDmg+weaponDmg)-asgoreStats["trueDef"]+randi_range(1, 2)) * (1 - (distanceDifference/width)) * 2)
+	
+	# --- NEW LOGIC TO INTERCEPT FATAL DAMAGE ---
+	# Check if Asgore's current HP minus the incoming damage would be 1 or less.
+	if asgoreStats["hp"] - dmg <= 1 and not asgore_is_defeated:
+		# If it's a fatal blow, set his HP to 1 and flag him as defeated.
+		asgoreStats["hp"] = 1
+		asgore_is_defeated = true
+	else:
+		# If it's not a fatal blow, subtract damage normally.
+		asgoreStats["hp"] -= dmg
+		
 	return dmg
 
  
@@ -896,7 +947,8 @@ func spawn_hand_side(side):
 	hand.texture = null
 	# Loop through the hand's own private list of pellets
 	for pellet in hand.get_meta("pellets"):
-		pellet.is_moving = true
+		if is_instance_valid(pellet):
+			pellet.is_moving = true
 # New function to rebuild the entire item display
 func _on_pellet_timer_timeout(hand_node: Sprite2D):
 	# 1. Create the pellet's base, which is an Area2D with the script.
@@ -932,7 +984,7 @@ func _on_pellet_timer_timeout(hand_node: Sprite2D):
 	
 	hand_node.add_child(pellet_area)
 	hand_node.get_meta("pellets").append(pellet_area)
-	
+
 func rebuild_item_menu():
 	for child in itemPage1.get_children():
 		child.queue_free()
@@ -971,16 +1023,8 @@ func _on_soul_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("asgoreAttacks") && invincible == false:
 		
 		# Apply damage
-		playerHP -= dmgTaken
-		
-		# Play damage sound
-		playEffect(dmgPlayerSnd)
+		handle_player_hit()
 		area.queue_free()
-		invincible = true
-		soul.play("InvincibilityFrames")
-		await get_tree().create_timer(1).timeout
-		soul.play('default')
-		invincible = false
 		# Delete the pellet that hit the soul
 	elif area.is_in_group("asgoreAttacks") && invincible == true:
 		area.queue_free()
@@ -1085,19 +1129,140 @@ func showBody():
 
 func _on_asgore_swipe_frame_changed() -> void:
 	#print(AsgoreSwiping.frame == 5 or AsgoreSwiping.frame == 6)
-	if soul.velocity != Vector2(0,0) && (AsgoreSwiping.frame == 5 or AsgoreSwiping.frame == 6) && tridentColor == "blue" && invincible == false:
-		playerHP-=dmgTaken
-		playEffect(dmgPlayerSnd)
-		invincible = true
-		soul.play("InvincibilityFrames")
-		await get_tree().create_timer(1).timeout
-		soul.play('default')
-		invincible = false
-	elif soul.velocity == Vector2(0,0) && (AsgoreSwiping.frame == 5 or AsgoreSwiping.frame == 6) && tridentColor == "orange" && invincible == false:
-		playerHP-=dmgTaken
-		playEffect(dmgPlayerSnd)
-		invincible = true
-		soul.play("InvincibilityFrames")
-		await get_tree().create_timer(1).timeout
-		soul.play('default')
-		invincible = false
+	var is_damage_frame = AsgoreSwiping.frame in [5, 6]
+	if not is_damage_frame:
+		return
+
+	# Determine if the player should take damage based on the color and movement.
+	var should_take_damage = (
+		(soul.velocity != Vector2.ZERO and tridentColor == "blue") or
+		(soul.velocity == Vector2.ZERO and tridentColor == "orange")
+	)
+
+	if should_take_damage:
+		handle_player_hit()
+func oscilatingFireBalls(fireSpeed):
+	var oscilatingNodeBase = Node2D.new()
+	oscilatingNodeBase.position=Vector2(0,0)
+func fire_burst_attack(emitter_node: Node2D, num_projectiles: int, speed: float, timeBetween:float, numTimes:int):
+	# TAU is a built-in Godot constant for a full circle (2 * PI).
+	# We divide the circle by the number of projectiles to find the angle between each one.
+	var angle_step = TAU / num_projectiles
+	var oscilator = get_tree().create_tween()
+	oscilator.finished.connect(returnOscilator)
+	oscilator.tween_property(referenceOscilator,"position:x",300,6)
+	# Loop to create each projectile.
+	for j in numTimes:
+		for i in range(num_projectiles):
+			# Calculate the angle for this specific projectile.
+			var current_angle = i * angle_step
+
+			# Create a direction vector by rotating a base vector (Vector2.RIGHT).
+			var direction = Vector2.RIGHT.rotated(current_angle)
+
+			# --- Pellet Creation (Copied and adapted from your _on_pellet_timer_timeout) ---
+
+			# 1. Create the pellet's base from your script.
+			var pellet_area = PELLET_SCRIPT.new()
+
+			# 2. Create the visual sprite.
+			var pellet_sprite = Sprite2D.new()
+			pellet_sprite.texture = pellet_texture
+			pellet_sprite.scale = Vector2(1.7, 1.7)
+			pellet_area.add_child(pellet_sprite)
+
+			# 3. Create the collision shape.
+			var pellet_collision = CollisionShape2D.new()
+			pellet_collision.shape = RectangleShape2D.new()
+			pellet_collision.shape.size = Vector2(17, 17)
+			pellet_area.add_child(pellet_collision)
+
+			# 4. Set the pellet's properties.
+			pellet_area.global_position = emitter_node.global_position # Start at the emitter's position
+			pellet_area.velocity = direction * speed # Use the calculated direction and speed
+			pellet_area.is_moving = true # Make sure it starts moving immediately
+			pellet_area.z_index = 10
+			pellet_area.collision_layer = 2
+			pellet_area.add_to_group("asgoreAttacks")
+
+			# 5. Add the cleanup notifier.
+			var notifier = VisibleOnScreenNotifier2D.new()
+			notifier.screen_exited.connect(pellet_area.queue_free)
+			pellet_area.add_child(notifier)
+			
+			# 6. Add the pellet to the battle area.
+			battleTextBox.add_child(pellet_area)
+		await get_tree().create_timer(timeBetween).timeout
+func returnOscilator():
+	referenceOscilator.position = Vector2(-107,-107)
+func fire_ring_implosion(num_projectiles: int, radius: float, speed: float, center_point: Vector2):
+	# TAU is a full circle in radians. We divide it to space the pellets evenly.
+	var box_center = battleTextBox.get_rect().get_center()
+	var angle_step = TAU / num_projectiles
+
+	for i in range(num_projectiles):
+		# 1. Calculate the spawn position for this pellet
+		var angle = i * angle_step
+		# Get a direction vector pointing OUT from the center
+		var outward_direction = Vector2.RIGHT.rotated(angle)
+		var spawn_position = center_point + (outward_direction * radius)
+
+		# 2. Calculate the velocity
+		# The direction is simply from the spawn position TOWARDS the center point
+		var inward_direction = spawn_position.direction_to(center_point)
+		
+		# --- Create and Configure the Pellet (based on your existing code) ---
+		var pellet_area = PELLET_SCRIPT.new()
+		var pellet_sprite = Sprite2D.new()
+		pellet_sprite.texture = pellet_texture
+		pellet_sprite.scale = Vector2(1.7, 1.7)
+		pellet_area.add_child(pellet_sprite)
+
+		var pellet_collision = CollisionShape2D.new()
+		pellet_collision.shape = RectangleShape2D.new()
+		pellet_collision.shape.size = Vector2(17, 17)
+		pellet_area.add_child(pellet_collision)
+
+		pellet_area.global_position = spawn_position
+		pellet_area.velocity = inward_direction * speed # Set its inward velocity
+		pellet_area.is_moving = true # Start moving immediately
+		pellet_area.z_index = 10
+		pellet_area.collision_layer = 2
+		pellet_area.add_to_group("asgoreAttacks")
+
+		var notifier = VisibleOnScreenNotifier2D.new()
+		notifier.screen_exited.connect(pellet_area.queue_free)
+		pellet_area.add_child(notifier)
+		
+		battleTextBox.add_child(pellet_area)
+func handle_player_hit():
+	# 1. Don't do anything if the player is already invincible.
+	if invincible:
+		return
+
+	# 2. If player HP is 1, the next hit is fatal.
+	if playerHP == 1:
+		playerHP = 0
+		# Your _process function will now handle the game over.
+		return
+
+	# 3. Calculate the potential HP after taking damage.
+	var potential_hp = playerHP - dmgTaken
+
+	# 4. Check if the hit would be fatal.
+	if potential_hp <= 0:
+		# If so, set HP to 1 instead of killing the player.
+		playerHP = 1
+	else:
+		# Otherwise, take damage normally.
+		playerHP -= dmgTaken
+
+	# 5. Play sound and start invincibility frames.
+	playEffect(dmgPlayerSnd)
+	invincible = true
+	soul.play("InvincibilityFrames")
+	await get_tree().create_timer(1).timeout
+	soul.play('default')
+	invincible = false
+func start_asgore_defeat_sequence():
+	get_tree().change_scene_to_file("res://asgore_defeat.tscn")

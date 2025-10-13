@@ -1,0 +1,238 @@
+[gd_scene load_steps=26 format=3 uid="uid://c4wxu05ev1gb4"]
+
+[ext_resource type="FontFile" uid="uid://dpdhulc4uo8og" path="res://Fonts/determination-mono.otf" id="1_8d4d2"]
+[ext_resource type="Script" uid="uid://dk38bvx4a1ggx" path="res://asgore_defeat.gd" id="1_hd6sk"]
+[ext_resource type="Texture2D" uid="uid://oohhlfln3xw" path="res://BattleMenuSprites/spr_fightbt/spr_fightbt_0.png" id="2_hbars"]
+[ext_resource type="Texture2D" uid="uid://b3dewlu2k202e" path="res://BattleMenuSprites/spr_hpname.png" id="2_hd6sk"]
+[ext_resource type="Texture2D" uid="uid://dpps23yvlmhmu" path="res://AsgoreSprites/AfterBattle/spr_asgore_kneeldeath.png" id="3_u2eul"]
+[ext_resource type="Texture2D" uid="uid://b4x3f2i7ipq64" path="res://BattleMenuSprites/spr_sparebt_bandage/spr_sparebt_bandage_0.png" id="3_y2rvd"]
+[ext_resource type="Texture2D" uid="uid://b2enncdbtfu6j" path="res://AsgoreSprites/AfterBattle/lastFaces/spr_asgore_lastface/spr_asgore_lastface_9.png" id="4_bby6k"]
+[ext_resource type="Texture2D" uid="uid://dibgqa5v6jed8" path="res://Extras/spr_blconsm2.png" id="5_1ib3r"]
+[ext_resource type="AudioStream" uid="uid://ct30n4t136nlx" path="res://snd/mus/mus_chokedup.ogg" id="7_u2eul"]
+[ext_resource type="Texture2D" uid="uid://b0xa0wq20v3nw" path="res://BattleMenuSprites/spr_heart_battle_pl/spr_heart_battle_pl_0.png" id="8_bby6k"]
+[ext_resource type="Script" uid="uid://dvb6b46w1uci8" path="res://soul_movement.gd" id="9_1ib3r"]
+[ext_resource type="Texture2D" uid="uid://b71to5fx80opl" path="res://BattleMenuSprites/spr_strike/spr_strike_0.png" id="12_0wl4t"]
+[ext_resource type="Texture2D" uid="uid://5kmusm5sqrik" path="res://BattleMenuSprites/spr_strike/spr_strike_1.png" id="13_yodgx"]
+[ext_resource type="Texture2D" uid="uid://c1dt0lfb1qjhe" path="res://BattleMenuSprites/spr_strike/spr_strike_2.png" id="14_5dp87"]
+[ext_resource type="Texture2D" uid="uid://sa0msgcnhxlw" path="res://BattleMenuSprites/spr_strike/spr_strike_3.png" id="15_c4jsq"]
+[ext_resource type="Texture2D" uid="uid://bkeh1a5mprqr5" path="res://BattleMenuSprites/spr_strike/spr_strike_4.png" id="16_copf5"]
+[ext_resource type="Texture2D" uid="uid://wyctlej37qlc" path="res://BattleMenuSprites/spr_strike/spr_strike_5.png" id="17_f6v8f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4b6n"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbars"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbars"]
+size = Vector2(110, 42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2rvd"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drhsn"]
+bg_color = Color(1, 0.941176, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ib3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_bby6k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2rvd"]
+size = Vector2(16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mrjq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0wl4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yodgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5dp87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c4jsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_copf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_f6v8f")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Slash",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AsgoreFight" type="Node2D"]
+script = ExtResource("1_hd6sk")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 0)
+offset_right = 600.0
+offset_bottom = 440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f4b6n")
+
+[node name="BattleTextBox" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 231.0
+offset_right = 559.0
+offset_bottom = 366.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hbars")
+
+[node name="FightBtn" type="Sprite2D" parent="Panel/BattleTextBox"]
+visible = false
+position = Vector2(75, 65)
+texture = ExtResource("2_hbars")
+
+[node name="FightBtn" type="Area2D" parent="Panel/BattleTextBox/FightBtn"]
+position = Vector2(85, 63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/BattleTextBox/FightBtn/FightBtn"]
+position = Vector2(-85, -63)
+shape = SubResource("RectangleShape2D_hbars")
+
+[node name="BrokenMercyBtn" type="Sprite2D" parent="Panel/BattleTextBox"]
+visible = false
+position = Vector2(450, 65)
+texture = ExtResource("3_y2rvd")
+
+[node name="BrokenMercyBtn" type="Area2D" parent="Panel/BattleTextBox/BrokenMercyBtn"]
+position = Vector2(440, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/BattleTextBox/BrokenMercyBtn/BrokenMercyBtn"]
+position = Vector2(-440, -61)
+shape = SubResource("RectangleShape2D_hbars")
+
+[node name="AsgoreBody" type="Node2D" parent="Panel"]
+
+[node name="MainBody" type="Sprite2D" parent="Panel/AsgoreBody"]
+position = Vector2(281, 129)
+texture = ExtResource("3_u2eul")
+
+[node name="LastFaces" type="Sprite2D" parent="Panel/AsgoreBody"]
+position = Vector2(284.5, 78)
+scale = Vector2(1.93617, 1.95833)
+texture = ExtResource("4_bby6k")
+
+[node name="Stats" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Name" type="Label" parent="Panel/Stats"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 375.0
+offset_right = 152.0
+offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("1_8d4d2")
+theme_override_font_sizes/font_size = 25
+text = "Chara"
+
+[node name="HP" type="Label" parent="Panel/Stats"]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 375.0
+offset_right = 402.0
+offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("1_8d4d2")
+theme_override_font_sizes/font_size = 25
+text = "20 / 20"
+
+[node name="LV" type="Label" parent="Panel/Stats"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 375.0
+offset_right = 81.0
+offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("1_8d4d2")
+theme_override_font_sizes/font_size = 25
+text = "LV 1"
+
+[node name="HPBar" type="ProgressBar" parent="Panel/Stats"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 377.0
+offset_right = 301.0
+offset_bottom = 397.0
+theme_override_styles/background = SubResource("StyleBoxFlat_y2rvd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_drhsn")
+max_value = 20.0
+value = 20.0
+show_percentage = false
+
+[node name="HPSpr" type="Sprite2D" parent="Panel/Stats"]
+position = Vector2(250, 391)
+scale = Vector2(1, 1.28994)
+texture = ExtResource("2_hd6sk")
+
+[node name="sndEff" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ChokedUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_u2eul")
+volume_db = 4.0
+parameters/looping = true
+
+[node name="TalkBox" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(487.75, 111)
+scale = Vector2(1.39899, 1)
+texture = ExtResource("5_1ib3r")
+flip_h = true
+
+[node name="AsgoreText" type="Label" parent="."]
+z_index = 10
+offset_left = 442.0
+offset_top = 66.0
+offset_right = 529.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_8d4d2")
+theme_override_font_sizes/font_size = 13
+text = "hello"
+
+[node name="Soul" type="AnimatedSprite2D" parent="."]
+position = Vector2(-11, -10)
+sprite_frames = SubResource("SpriteFrames_1ib3r")
+script = ExtResource("9_1ib3r")
+
+[node name="Area2D" type="Area2D" parent="Soul"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soul/Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_y2rvd")
+
+[node name="Slash" type="AnimatedSprite2D" parent="."]
+position = Vector2(297, 104.5)
+scale = Vector2(2.57143, 4.21875)
+sprite_frames = SubResource("SpriteFrames_mrjq0")
+animation = &"Slash"
+
+[connection signal="area_entered" from="Soul/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Soul/Area2D" to="." method="_on_area_2d_area_exited"]
